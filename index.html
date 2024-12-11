@@ -1,0 +1,81 @@
+
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Resume Builder </h1>
+        
+        <section id="form-part">
+            <h2>Personal Info</h2>
+            <label for="Image">Insert Image</label>
+            <input type="file" name="Profile-picture" id="profile-picture" required>
+            <label for="Name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Please enter Your name" required>
+            <br>
+            <label for="Email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Please Enter your Email" required>
+            <br>
+            <label for="Contact">Contact</label>
+            <input type="text" name="contact" id="contact" placeholder="Please enter Your contact Number" required>
+            <br>
+            <label for="City">City</label>
+            <input type="text" name="city" id="city" placeholder="Please enter your city" required>
+        </section>
+        <button id="toggle-personal-info-btn" onclick="toggleSection('form-part')">Show/Hide Personal Info</button>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <label for="education">Enter your education</label>
+                <input type="text" name="education" id="educationlist">
+            </ul>
+            <button type="submit">Add</button>
+            <button type="reset">Reset</button>
+        </section>
+        <button id="toggle-education-btn" onclick="toggleSection('education')">Show/Hide Education</button>
+      
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <label for="skills">Enter Your Skills</label>
+                <input type="text" name="skills" id="skillslist">
+            </ul>
+            <button type="submit">Add</button>
+            <button type="reset">Reset</button>
+        </section>
+        <button id="toggle-skills-btn" onclick="toggleSection('skills')">Show/Hide Skills</button>
+        
+        <section id="work-experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <label for="Work-experience">Enter Work Experience</label>
+                <input type="text" name="Work-experience" id="workexperiencelist">
+            </ul>
+            <button type="submit">Add</button>
+            <button type="reset">Reset</button>
+        </section>
+        <button id="toggle-work-btn" onclick="toggleSection('work-experience')">Show/Hide Work Experience</button>
+        
+        <br><br>
+        <button id="submit">Submit & Generate Resume</button>
+    </div>
+    
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
